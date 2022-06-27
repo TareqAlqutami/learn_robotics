@@ -54,3 +54,6 @@ Contains videos and images of sample results.
 
 ## **library**
 Contains scripts and functions that are used in other modules
+
+## **Notes**
+Each module should contain a citation of all references consulted and external materials/code used.
