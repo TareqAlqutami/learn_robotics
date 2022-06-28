@@ -1,3 +1,5 @@
+%% compare ideal vs realistic for each controller
+
 controllers_labels = {
      'PD_control','PID_control','PolePlacement_control',...
      'PolePlacement_D_control','PD_plus_gravity','PD_plus_gravity_plus_feadforward','Inverse_dynamics_control','robust_control'};
@@ -9,8 +11,9 @@ n_controllers = length(controllers_labels);
 
 trajectory = 'step_0_close'; 
 
-%% compare ideal vs realistic for each controller
 mkdir('results');
+run('sim_params.m');
+
 for i=1:n_controllers
     controller = controllers_labels{i};
     trajectory = 'sine'; % change this depending on the commanded trajectory (step,sine, trapz)
@@ -252,15 +255,13 @@ end
 %% compare controllers
 mkdir('results/loaded');
 controllers_labels = {
-     'LQR_D_control','Robust_LQR_D_control'};
-%      'PolePlacement_D_control','LQR_D_control','Inverse_dynamics_PID_control','PID_plus_gravity','robust_PID_control'};
+     'LQR_D_control','Robust_LQR_D_control','Inverse_dynamics_PID_control','PID_plus_gravity','robust_PID_control'};
 controller_display_names = {
-      'LQR+D','Robust+LQR+D'};
-%      'Pole Placement+D','LQR+D','Gravity+PID','Inverse dynamics+PID','Robust+PID'};
+     'LQR+D','Robust LQR+D','Gravity+PID','Inverse dynamics+PID','Robust+PID'};
 
   plot_symbols = {'--','-.','--','-.','--',':','-.'};
 trajectory = 'sine';
-tag = '_PID_lqr';
+tag = 'sine';
 plot_symbols    = {'r--','m-','k-.','b--','r-','k:','k-'};
 if strcmp(trajectory,'sine')
     legend_loc = 'northeast';
@@ -286,14 +287,17 @@ Kdc = dcgain(syscl);
 Kr = 1./Kdc; % scaling terms to eliminate sse
 Kr(isinf(Kr))=0;
 
-Q = diag([100,30,1,1]);
-R = diag([0.1,0.2]);
+Q = diag([100,20,1,10]);
+R = diag([0.1,1.2]);
 Klqr = lqr(A,B,Q,R); 
 A_cl = A-B*Klqr;
 syscl = ss(A_cl,B,C,D);
 Kdc = round(dcgain(syscl),2);
 Kr_lqr = 1./Kdc; % scaling terms to eliminate sse
 Kr_lqr(isinf(Kr_lqr))=0;
+Ksm = [7;0.2]; % robust term gain
+phi_sm = [0.2;0.5]; % boundray layer
+gs = [1;0.5]; % surface gain;
 
 Kp1_grav  = 15;
 Kd1_grav  = 2.5;
@@ -310,6 +314,10 @@ N1_inv  = 50;
 Kp2_inv  = 50;
 Kd2_inv  = 15;%48
 N2_inv  = 50;
+
+Ksm_id = [7;0.2]; % robust term gain
+phi_sm_id = [0.2;0.5]; % boundray layer
+gs_id = [1;0.5]; % surface gain;
 
 n = 2;
 P = eye(2*n)/10^10;
