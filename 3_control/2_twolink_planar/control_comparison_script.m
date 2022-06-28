@@ -10,6 +10,7 @@ n_controllers = length(controllers_labels);
 trajectory = 'step_0_close'; 
 
 %% compare ideal vs realistic for each controller
+mkdir('results');
 for i=1:n_controllers
     controller = controllers_labels{i};
     trajectory = 'sine'; % change this depending on the commanded trajectory (step,sine, trapz)
@@ -249,11 +250,15 @@ for i=1:n_controllers
 end
 
 %% compare controllers
+mkdir('results/loaded');
 controllers_labels = {
-     'PolePlacement_D_control','LQR_D_control','Inverse_dynamics_PID_control','PID_plus_gravity','robust_PID_control'};
+     'LQR_D_control','Robust_LQR_D_control'};
+%      'PolePlacement_D_control','LQR_D_control','Inverse_dynamics_PID_control','PID_plus_gravity','robust_PID_control'};
 controller_display_names = {
-      'Pole Placement+D','LQR+D','Gravity+PID','Inverse dynamics+PID','Robust+PID'};
-plot_symbols = {'--','-.','--','-.','--',':','-.'};
+      'LQR+D','Robust+LQR+D'};
+%      'Pole Placement+D','LQR+D','Gravity+PID','Inverse dynamics+PID','Robust+PID'};
+
+  plot_symbols = {'--','-.','--','-.','--',':','-.'};
 trajectory = 'sine';
 tag = '_PID_lqr';
 plot_symbols    = {'r--','m-','k-.','b--','r-','k:','k-'};
@@ -263,6 +268,7 @@ else
     legend_loc = 'northwest';
 end
 
+run('sim_params.m');
 % === params ====
 Kp1 = 30; 
 Ki1 = 20;
@@ -280,8 +286,8 @@ Kdc = dcgain(syscl);
 Kr = 1./Kdc; % scaling terms to eliminate sse
 Kr(isinf(Kr))=0;
 
-Q = diag([100,50,1,1]);
-R = diag([0.1,0.1]);
+Q = diag([100,30,1,1]);
+R = diag([0.1,0.2]);
 Klqr = lqr(A,B,Q,R); 
 A_cl = A-B*Klqr;
 syscl = ss(A_cl,B,C,D);
