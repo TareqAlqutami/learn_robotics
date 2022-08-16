@@ -57,3 +57,13 @@ Contains scripts and functions that are used in other modules
 
 ## **Notes**
 Each module should contain a citation of all references consulted and external materials/code used.
+
+## **Good references**
+### Manipulators
+- [Designing Robot Manipulator Algorithms](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-designing-robot-manipulator-algorithms-1515776491590.html?s_tid=vid_pers_recs)
+
+- [Controlling Robot Manipulator Joints](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-controlling-robot-manipulator-joints-1521714030608.html)
+-  [Trajectory Planning for Robot Manipulators](https://www.mathworks.com/videos/trajectory-planning-for-robot-manipulators-1556705635398.html)
+
+- [Trajectory Tracking Control via Decentralized Joint-Level Schemes](https://github.com/RickyMexx/ttc-decentralized)
+

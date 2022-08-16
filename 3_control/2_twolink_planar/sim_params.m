@@ -32,6 +32,27 @@ joint_pos_variance  = joint_pos_precision^2;
 b1 = 0.01; %0.1 (N.m/(rad/sec));
 b2 = 0.01; %0.1 (N.m/(rad/sec));
 
+%% robot representation using Robotics toolbox,
+% this is to use IK and FK of robotics toolbox
+
+RR_robot = rigidBodyTree;
+link1 = rigidBody('link1');
+jnt1 = rigidBodyJoint('theta1','revolute');
+link2 = rigidBody('link2');
+jnt2 = rigidBodyJoint('theta2','revolute');
+
+dhparams = [L1x 0 0 0;
+            L2x 0 0 0];
+
+setFixedTransform(jnt1,dhparams(1,:),'dh');
+link1.Joint = jnt1;
+addBody(RR_robot,link1,'base')
+
+setFixedTransform(jnt2,dhparams(2,:),'dh');
+link2.Joint = jnt2;
+addBody(RR_robot,link2,'link1')
+end_effector = rigidBody('end_effector');
+addBody(RR_robot,end_effector,'link2');
 %% initial conditions
 theta1_0     = 0;                            % rad
 theta1_dot_0 = 0;                            % rad/sec 
