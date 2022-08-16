@@ -33,8 +33,7 @@ This repository contains notes and examples of control strategies of robots.
     - Curved environment
     - Extruded environment
 
-<img src="../media/impedance_control/sim_4_twolink_impedance_control_curved.gif" width="300" height="200"/>
-<img src="../media/impedance_control/sim_4_twolink_impedance_control_extruded.gif" width="300" height="200"/>
+<img src="../media/impedance_control/sim_4_twolink_impedance_control_curved.gif" width="300" height="200"/> <img src="../media/impedance_control/sim_4_twolink_impedance_control_extruded.gif" width="300" height="200"/>
 
 
 ### 4- Force control
