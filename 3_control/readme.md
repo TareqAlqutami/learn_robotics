@@ -36,8 +36,22 @@ This repository contains notes and examples of control strategies of robots.
 <img src="../media/impedance_control/sim_4_twolink_impedance_control_curved.gif" width="300" height="200"/>
 <img src="../media/impedance_control/sim_4_twolink_impedance_control_extruded.gif" width="300" height="200"/>
 
+
+### 4- Force control
+- Simulations of Two-link planar (RR) interacting with different environments and focused on both motion and force regulations.
+- Examples of different controllers:
+    - Hybrid position/force control
+- Examples of different environments:
+    - Straight Wall environment
+    - Curved environment
+    - Extruded environment
+    - Different environment stiffness
+
+<img src="../media/force_control/sim_5_twolink_force_control_wall.gif" width="300" height="200"/> <img src="../media/force_control/sim_5_twolink_force_control_curved.gif" width="300" height="200"/>
+
 ## **Notes**
 - Don't forget to  add the contents of `library` folder to MATLAB path. 
+- Run the live script before running the simulation to set necessary parameters
 
 ## TODO
 - Simulation example of robot control in ROS.
