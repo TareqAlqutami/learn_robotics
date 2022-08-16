@@ -50,6 +50,20 @@ Read the readme within each subfolder for info on its content.
     - Full state feedback control (Pole Placement and LQR)
     - Inverse Dynamics control
     - Robust control (Sliding mode control)
+
+### 4- Impedance/compliance control
+- Simulations of Two-link planar (RR) interacting with different environments and target trajectories
+- Examples of different controllers:
+    - Impedance control with force/torque (F/T) sensor 
+    - Impedance control without (F/T sensor 
+- Examples of different environments:
+    - Straight Wall environment
+    - Curved environment
+    - Extruded environment
+
+<img src="media/impedance_control/sim_4_twolink_impedance_control_curved.gif" width="300" height="200"/>
+<img src="media/impedance_control/sim_4_twolink_impedance_control_extruded.gif" width="300" height="200"/>
+
 ## **docs**
   Contains reports that analyze and summarize results
 
