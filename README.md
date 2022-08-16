@@ -20,9 +20,9 @@ Read the readme within each subfolder for info on its content.
 
 ## **Dynamics**
 ### 1. Rigid body dynamics
-- Intro rigid body dynamics and equation of motions
+- Intro to rigid body dynamics and equation of motions
 - Simulate dynamics of a two-link planar arm using Robotics Toolbox
-### 2. Two-link Planar dynamics
+### 2. Two-link Planar (RR) dynamics
 - Formulate the dynamics using Lagrange formulation
 - Simulate the dynamics in Simulink
 - Compare derived dynamics to SimScape multibody model
@@ -33,8 +33,8 @@ Read the readme within each subfolder for info on its content.
 ### 1- Introduction to joint control: 
 - transfer function of a motor and simple control
 - Simulink simulation
-### 2- Two-link planar control
-- Ideal vs realistic simulation
+### 2- Joint control
+- Ideal vs realistic simulations on Two-link planar (RR)
 - Examples of different controllers:
     - PD control
     - PID control
@@ -42,7 +42,14 @@ Read the readme within each subfolder for info on its content.
     - Gravity compensated control
     - Inverse Dynamics control
     - Robust control
-
+### 3- Task control
+- Ideal simulations on Two-link planar (RR)
+- Examples of different controllers:
+    - PID control
+    - Gravity compensated PD control
+    - Full state feedback control (Pole Placement and LQR)
+    - Inverse Dynamics control
+    - Robust control (Sliding mode control)
 ## **docs**
   Contains reports that analyze and summarize results
 
