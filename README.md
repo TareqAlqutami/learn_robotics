@@ -76,7 +76,7 @@ Read the readme within each subfolder for info on its content.
 
 <img src="media/force_control/sim_5_twolink_force_control_wall.gif" width="300" height="200"/> <img src="media/force_control/sim_5_twolink_force_control_curved.gif" width="300" height="200"/>
 
-# ** Drones**
+# **Drones**
 ### 1- Attitude_representation
 ### 2 Drone (Quadcopter) modeling
 ### 3- Attitude control
