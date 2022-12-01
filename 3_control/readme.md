@@ -40,6 +40,8 @@ This repository contains notes and examples of control strategies of robots.
 - Simulations of Two-link planar (RR) interacting with different environments and focused on both motion and force regulations.
 - Examples of different controllers:
     - Hybrid position/force control
+    - Parallel position and force control
+    - Admittance control
 - Examples of different environments:
     - Straight Wall environment
     - Curved environment
