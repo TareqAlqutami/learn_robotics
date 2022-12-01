@@ -2,23 +2,23 @@
 This repository contains notes, simulations and explanations of multiple robotic concepts. It is organized such that concepts are incremental in complexity.
 Read the readme within each subfolder for info on its content.
 
-## **Requirements**
+# **Requirements**
 1. MATLAB R2021a or above
 2. Install the Robotics Toolbox by Peter Corke. The correct version is provided with this repo `RTB.mltbx`
 3. Add required folders to MATLAB path
    - `library` folder and subfolders
 
-## **Basics**
+# **Basics**
 ### 1. symbolic math (MATLAB)
 - Symbolic math vs numeric math
 - Symbolic math operations in MATLAB
 - Case study: Spring mass damper
-## **Kinematics**
+# **Manipulator Kinematics**
 ###  1. Planar Manipulators
 ###  2. Forward and inverse kinematics of three-link planar
 ###  3. Three-link planar from URDF and waypoint tracking
 
-## **Dynamics**
+# **Manipulator Dynamics**
 ### 1. Rigid body dynamics
 - Intro to rigid body dynamics and equation of motions
 - Simulate dynamics of a two-link planar arm using Robotics Toolbox
@@ -29,7 +29,7 @@ Read the readme within each subfolder for info on its content.
 
 ![](media/twolink_planar_dynamics_1x_friction.gif)
 
-## **Control**
+# **Manipulator Control**
 ### 1- Introduction to joint control: 
 - transfer function of a motor and simple control
 - Simulink simulation
@@ -76,23 +76,29 @@ Read the readme within each subfolder for info on its content.
 
 <img src="media/force_control/sim_5_twolink_force_control_wall.gif" width="300" height="200"/> <img src="media/force_control/sim_5_twolink_force_control_curved.gif" width="300" height="200"/>
 
-## **docs**
+# ** Drones**
+### 1- Attitude_representation
+### 2 Drone (Quadcopter) modeling
+### 3- Attitude control
+### 4- Position control
+
+# **docs**
   Contains reports that analyze and summarize results
 
-## **Drawings**
+# **Drawings**
 Contains some drawing files and block diagrams
 
-## **Media**
+# **Media**
 Contains videos and images of sample results.
 
-## **library**
+# **library**
 Contains scripts and functions that are used in other modules
 
-## **Notes**
+# **Notes**
 Each module should contain a citation of all references consulted and external materials/code used.
 
-## **Good references**
-### Manipulators
+# **Good references**
+## Manipulators
 - [Designing Robot Manipulator Algorithms](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-designing-robot-manipulator-algorithms-1515776491590.html?s_tid=vid_pers_recs)
 
 - [Controlling Robot Manipulator Joints](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-controlling-robot-manipulator-joints-1521714030608.html)
@@ -100,3 +106,7 @@ Each module should contain a citation of all references consulted and external m
 
 - [Trajectory Tracking Control via Decentralized Joint-Level Schemes](https://github.com/RickyMexx/ttc-decentralized)
 
+## Drones
+- [Robotics: Aerial Robotics course in Coursera](https://www.coursera.org/learn/robotics-flight)
+- [Modelling, Simulation, and Control of a Quadcopter, Mathworks webinar](https://www.mathworks.com/videos/modelling-simulation-and-control-of-a-quadcopter-122872.html)
+- [Quadrotor Dynamics and Control, Randal Beard](https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=2324&context=facpub)
