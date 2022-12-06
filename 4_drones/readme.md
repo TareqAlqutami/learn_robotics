@@ -23,3 +23,7 @@ This repository contains notes and examples of modeling and control of a quadcop
 ## **Notes**
 - Run the live script before running the simulation to set necessary parameters
 
+
+## References
+
+- https://www.ccs.neu.edu/home/rplatt/cs5335_fall2017/slides/euler_quaternions.pdf
