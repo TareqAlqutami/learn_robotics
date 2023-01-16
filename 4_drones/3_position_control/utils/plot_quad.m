@@ -11,8 +11,8 @@ quadcolors = lines(1);
 set(gcf,'Renderer','OpenGL')
 
 % Initialize video
-myVideo = VideoWriter('quad_video'); %open video file
-myVideo.FrameRate = 90;  %can adjust this, 5 - 10 works well for me
+myVideo = VideoWriter('quad_video2'); %open video file
+myVideo.FrameRate = 30;  %can adjust this, 5 - 10 works well for me
 open(myVideo)
 
 % first iteration
@@ -55,7 +55,7 @@ writeVideo(myVideo, frame);
 pause(0.01);
 
 % rest of iterations
-for i = 1:1:max_iter
+for i = 900:5:3000
     time = out.state.Xe.Time(i);
     pos = out.state.Xe.Data(:,i);
     pos_cmd = [out.cmd.X.x_cmd.Data(i), out.cmd.X.y_cmd.Data(i), out.cmd.X.z_cmd.Data(i)];
