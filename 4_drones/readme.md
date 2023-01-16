@@ -19,6 +19,7 @@ This repository contains notes and examples of modeling and control of a quadcop
 - Position and velocity controller 
 - Thrust to attitude conversion
 <img src="../media/drone/thrust_visualization.gif" width="300" height="200"/>
+
 ### 5- State estimation
 - Simulation of IMU sensor
 - Attitude state estimation using Extended Kalman Filter (EKF)

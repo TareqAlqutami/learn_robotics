@@ -94,6 +94,7 @@ Read the readme within each subfolder for info on its content.
 - Position and velocity controller 
 - Thrust to attitude conversion
 <img src="media/drone/thrust_visualization.gif" width="300" height="200"/>
+
 ### 5- State Estimation (EKF)
 - Simulation of IMU sensor
 - Attitude state estimation using Extended Kalman Filter (EKF)
