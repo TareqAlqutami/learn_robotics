@@ -1,5 +1,5 @@
 # **Learn Robotics - drones**
-This repository contains notes and examples of modeling and control of a quadcopter
+This repository contains notes and examples of modeling and control of a quadcopter.
 
 ## **Content**
 ### 1- Attitude_representation
@@ -10,7 +10,7 @@ This repository contains notes and examples of modeling and control of a quadcop
 - Simulation of the model in Matlab and Simulink
 ### 3- Attitude control
 - Control allocation and motor control
-- Boy rates control
+- Body rates control
 - Euler angles based attitude control
 - Rotation matrix based attitude control
 - Quaternion based attitude control
@@ -18,6 +18,10 @@ This repository contains notes and examples of modeling and control of a quadcop
 ### 4- Position control
 - Position and velocity controller 
 - Thrust to attitude conversion
+<img src="../media/drone/thrust_visualization.gif" width="300" height="200"/>
+### 5- State estimation
+- Simulation of IMU sensor
+- Attitude state estimation using Extended Kalman Filter (EKF)
 
 
 ## **Notes**

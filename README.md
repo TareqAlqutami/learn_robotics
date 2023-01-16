@@ -78,9 +78,26 @@ Read the readme within each subfolder for info on its content.
 
 # **Drones**
 ### 1- Attitude_representation
+- How to represent drone attitude (Euler angles, rotation matrix, quaternion)
+- Conversion between states in body-fixed frame and inertial frame
 ### 2 Drone (Quadcopter) modeling
+- Developing the equations of motions of a quadcopter
+- Simulation of the model in Matlab and Simulink
 ### 3- Attitude control
+- Control allocation and motor control
+- Body rates control
+- Attitude control using
+  - Euler angles
+  - Rotation matrix
+  - Quaternion
 ### 4- Position control
+- Position and velocity controller 
+- Thrust to attitude conversion
+<img src="media/drone/thrust_visualization.gif" width="300" height="200"/>
+### 5- State Estimation (EKF)
+- Simulation of IMU sensor
+- Attitude state estimation using Extended Kalman Filter (EKF)
+
 
 # **docs**
   Contains reports that analyze and summarize results
