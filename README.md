@@ -125,6 +125,9 @@ Each module should contain a citation of all references consulted and external m
 - [Trajectory Tracking Control via Decentralized Joint-Level Schemes](https://github.com/RickyMexx/ttc-decentralized)
 
 ## Drones
+- [How do Airplanes fly? - Youtube Video](https://www.youtube.com/watch?v=URJWcceup8A&t=360s)
 - [Robotics: Aerial Robotics course in Coursera](https://www.coursera.org/learn/robotics-flight)
 - [Modelling, Simulation, and Control of a Quadcopter, Mathworks webinar](https://www.mathworks.com/videos/modelling-simulation-and-control-of-a-quadcopter-122872.html)
 - [Quadrotor Dynamics and Control, Randal Beard](https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=2324&context=facpub)
+- [Introduction to Aerial Robotics: Online Textbook
+](http://www.kostasalexis.com/online-textbook.html)
